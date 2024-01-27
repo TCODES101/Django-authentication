@@ -1,0 +1,43 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{%static 'styles.css'%}">
+</head>
+<body>
+    <div class="da-signup">
+        
+        <form action="" method="POST">
+            <h6>{%for m in messages%}{{m}}{%endfor%}</h6>
+            {%csrf_token%}
+            <h3>Signup</h3>
+            <label >Username:</label><br>
+            <input type="text" name="username"><br><br>
+            <label>Email:</label><br>
+            <input type="email"name="email"><br><br>
+            <label>Password:</label><br>
+            <input type="password"name="passwordOne" id="p1"><br><br>
+            <label>Repeat password:</label><br>
+            <input type="password" name="passwordTwo" id="p2"><br><br>
+            <label>Show password</label>
+            <input type="checkbox" class="checkbox" onclick="
+            let x=document.getElementById('p1');
+            let y=document.getElementById('p2');
+            if(p1.type==='password' && p2.type==='password'){
+                p1.type='text';
+                p2.type='text';
+            }else{
+                p1.type='password';
+                p2.type='password';
+            }
+            "><br><br>
+            <input type="submit" value="Continue" class="submit">
+        </form>
+    </div>
+  
+    
+</body>
+</html>

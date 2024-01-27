@@ -1,0 +1,35 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{%static 'styles.css'%}">
+</head>
+<body>
+    <div class="da-login">
+        <a href="/signup/" class="signup">Signup</a>
+        <form action=""method="POST">
+            {%csrf_token%}
+            <h3>Login</h3>
+            <label>Username:</label><br>
+            <input type="text" name="username"><br><br>
+            <label>Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <label>Show password</label>
+            <input type="checkbox" class="checkbox"onclick="
+            let x = document.getElementById('password');
+            if(x.type==='password'){
+                x.type='text';
+            }else{
+                x.type='password'
+            }
+
+            "><br><br>
+            <input type="submit"value="Continue" class="submit"><br><br>
+            <p style="float: right;">Forgot password? <a href="/reset_password/"style="color:white;">Click here!</a></p>
+        </form>
+    </div>
+</body>
+</html>
