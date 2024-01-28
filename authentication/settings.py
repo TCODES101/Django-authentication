@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'authentication.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'Galaxy',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'NAME': os.environ.get('postgres'),
+        'USER': os.environ.get('postgres'),
+        'PASSWORD': os.environ.get('Galaxy'),
+        'HOST': os.environ.get('localhost'),
+        'PORT': os.environ.get('5432'),
     }
 }
 
