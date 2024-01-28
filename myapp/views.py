@@ -25,7 +25,7 @@ def signup_view(request):
         subject = 'Welcome to JFLATS'
        
         reg=re.compile('[@_!#$%^&*()~:/\|]')
-        if username or email or password or password2 =='':
+        if username==''or email=='' or password=='' or password2 =='':
                 messages.info(request, 'All fields must be filled')
                 return redirect('signup')
 

@@ -12,6 +12,7 @@
         <a href="/signup/" class="signup">Signup</a>
         <form action=""method="POST">
             {%csrf_token%}
+            {%for m in messages%}{{m}}{%endfor%}
             <h3>Login</h3>
             <label>Username:</label><br>
             <input type="text" name="username"><br><br>
