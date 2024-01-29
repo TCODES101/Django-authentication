@@ -120,4 +120,18 @@ label{
         width: fit-content;
        
     }
+    .da-signup form{
+       
+        width: 75vw;
+        padding: 10px;
+        margin-top: 5vh;
+    
+    
+    }
+    .da-signup .submit{
+       
+   
+        width: fit-content;
+       
+    }
   }
