@@ -108,3 +108,16 @@ label{
 .signup:hover{
     box-shadow: 5px 5px 30px white;
 }
+@media only screen and (max-width: 480px) {
+    .da-login form{
+        width: 75vw;
+        padding: 10px;
+        margin-top: 10vh;
+        height: fit-content;
+        
+    }
+    .da-login .submit{
+        width: fit-content;
+       
+    }
+  }
